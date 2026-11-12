@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Drinks from "./pages/Drinks";
 import Sweets from "./pages/Sweets";
 import Contact from "./pages/Contact";
-import Cart, { CartProvider } from "./components/CartProvider";
+import { CartProvider } from "./components/CartProvider";
 import Footer from "./components/Footer";
 import "./App.css";
 

@@ -16,9 +16,9 @@ function SweetCard({ sweet }) {
     if (quantity > 0 && removeFromCart) {
       
       const itemIndex = cartItems.findIndex((item) => item.id === sweet.id);
-      if (itemIndex !== -1) {
+     
         removeFromCart(itemIndex);
-      }
+      
     }
   };
 
@@ -53,16 +53,7 @@ export default function Sweets() {
   
     alert("Success! Your order has been received. 🥳");
 
-    
-    if (clearCart) {
-      clearCart();
-    } else if (removeFromCart) {
-    
-      const count = cartItems.length;
-      for (let i = count - 1; i >= 0; i--) {
-        removeFromCart(i);
-      }
-    }
+    clearCart();
   };
 
   return (

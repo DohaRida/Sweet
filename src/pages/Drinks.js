@@ -14,15 +14,16 @@ function DrinkCard({ drink }) {
     addToCart(drink);
   };
 
+  
   const handleDecrease = () => {
     if (quantity > 0 && removeFromCart) {
+      
       const itemIndex = cartItems.findIndex((item) => item.id === drink.id);
-      if (itemIndex !== -1) {
+     
         removeFromCart(itemIndex);
-      }
+      
     }
   };
-
   return (
     
     <div className="menu-card">
@@ -56,15 +57,7 @@ export default function Drinks() {
   
     alert("Success! Your order has been received. 🥳");
 
-    
-    if (clearCart) {
-      clearCart();
-    } else if (removeFromCart) {
-      const count = cartItems.length;
-      for (let i = count - 1; i >= 0; i--) {
-        removeFromCart(i);
-      }
-    }
+    clearCart();
   };
 
   return (
